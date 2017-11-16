@@ -1,0 +1,7 @@
+li.todo.icon {
+  color: red;
+}
+
+li.todo.icon.done {
+  color: green;
+}
