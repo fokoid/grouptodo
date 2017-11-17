@@ -12,5 +12,10 @@ module.exports = {
       { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
       { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ }
     ]
+  },
+  devServer: {
+    contentBase: path.join(__dirname, "public"),
+    compress: true,
+    port: 3000
   }
 };

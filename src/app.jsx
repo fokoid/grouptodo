@@ -2,13 +2,14 @@ import React, {Component} from 'react'
 import {render} from 'react-dom'
 import TodoList from './todo-list.jsx'
 
+
 class App extends Component {
   state = {
     // just a dummy test list for now
     todos: [
       {
         id: 1,
-        title: "Get scholarship",
+        title: "Get my scholarship",
         body: "Get into Google Developer Challenge Scholarship.",
         done: true
       },
@@ -27,6 +28,10 @@ class App extends Component {
       <TodoList todos={this.state.todos} />
     </div>
   )
+}
+
+if (module.hot) {
+  module.hot.accept()
 }
 
 render(<App />, document.getElementById('main'))
