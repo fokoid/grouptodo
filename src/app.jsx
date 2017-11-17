@@ -19,17 +19,18 @@ class App extends Component {
         done: false
       }
     ],
-    dummyTodo: {
-      title: 'Add title',
+  }
+
+  emptyTodo = {
+    title: 'Add title',
       body: 'Add description',
       tags: new Set([]),
       done: false
-    }
   }
 
   createTodo = ({title, body, tags}) => {
     this.setState(({todos}) => {
-      todos.push({title, body, tags, done: false})
+      todos.push(Object.assign({}, this.emptyTodo))
       return todos
     })
   }

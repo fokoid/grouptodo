@@ -7,7 +7,6 @@ const TodoItem = ({
   updateCallback,
   removeCallback
 }) => {
-  console.log(enabled)
   const toggle = enabled ? (
     <div className='todo toggle'>
       <RIEToggle
