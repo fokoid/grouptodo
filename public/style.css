@@ -5,3 +5,9 @@ li.todo.icon {
 li.todo.icon.done {
   color: green;
 }
+div.todo.toggle {
+  float: right;
+}
+div.todo.delete {
+  float: right;
+}

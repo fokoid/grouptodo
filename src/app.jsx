@@ -7,24 +7,61 @@ class App extends Component {
     // just a dummy test list for now
     todos: [
       {
-        id: 1,
         title: "Get scholarship",
         body: "Get into Google Developer Challenge Scholarship.",
+        tags: new Set(['web', 'development', 'pwa', 'udacity']),
         done: true
       },
       {
-        id: 2,
         title: "Make todo list app",
         body: "Make a great progressive web todo list app for the Google Developer Challenge Scholarship.",
+        tags: new Set(['pwa', 'react', 'webpack', 'express']),
         done: false
       }
-    ]
+    ],
+    dummyTodo: {
+      title: 'Add title',
+      body: 'Add description',
+      tags: new Set([]),
+      done: false
+    }
+  }
+
+  createTodo = ({title, body, tags}) => {
+    this.setState(({todos}) => {
+      todos.push({title, body, tags, done: false})
+      return todos
+    })
+  }
+
+  removeTodo = id => {
+    this.setState(({todos}) => {
+      todos.splice(id, 1)
+      return todos
+    })
+  }
+
+  updateTodo = (id, todo) => {
+    if (id < this.state.todos.length) {
+      this.setState(({todos}) => {
+        Object.assign(todos[id], todo)
+        return todos
+      })
+    }
   }
 
   render = () => (
     <div>
       <h1>Todo List</h1>
-      <TodoList todos={this.state.todos} />
+      <TodoList
+        callbacks={{
+          update: this.updateTodo,
+          add: this.createTodo,
+          remove: this.removeTodo
+        }}
+        todos={this.state.todos}
+        dummyTodo={this.state.dummyTodo}
+      />
     </div>
   )
 }
