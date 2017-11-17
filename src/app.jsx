@@ -9,7 +9,7 @@ class App extends Component {
     todos: [
       {
         id: 1,
-        title: "Get my scholarship",
+        title: "Get scholarship",
         body: "Get into Google Developer Challenge Scholarship.",
         done: true
       },
@@ -22,16 +22,19 @@ class App extends Component {
     ]
   }
 
+
+
   render = () => (
     <div>
-      <h1>Todo List</h1>
+      <h1>To List</h1>
       <TodoList todos={this.state.todos} />
     </div>
   )
 }
 
-if (module.hot) {
-  module.hot.accept()
-}
+export default App;
 
-render(<App />, document.getElementById('main'))
+
+
+
+
