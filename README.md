@@ -9,3 +9,24 @@ Group todo list app created as part of the Google Developer Scholarship 2017
   `at/refactor`.
 * When code is ready to be merged, make a pull request to master. Any
   contributor except the PR owner can approve the PR and merge it.
+
+### Build
+
+* To install necessary dependencies run
+  ```bash
+  npm install
+  ```
+  in the project root.
+* To build the code run
+  ```bash
+  npm run build
+  ```
+  which will build the React JSX files with `webpack`. You can leave this
+  running in the background to watch for new changes in `src/` and automatically
+  rebuild `public/bundle.js` after changes are made.
+* To view the page, start the local webserver with
+  ```bash
+  npm run start
+  ```
+  which will start a local webserver on port `3000`.
+* View it by visiting `http://localhost:3000` in your browser.
