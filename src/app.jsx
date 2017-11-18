@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {render} from 'react-dom'
 import TodoList from './todo-list.jsx'
 
+
 class App extends Component {
   state = {
     // just a dummy test list for now
@@ -67,4 +68,4 @@ class App extends Component {
   )
 }
 
-render(<App />, document.getElementById('main'))
+export default App
