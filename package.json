@@ -4,7 +4,7 @@
   "description": "Progressive web todo list app created as part of the Google Developer Challenge Scholarship 2017",
   "main": "server.js",
   "scripts": {
-    "start": "webpack-dev-server --hot",
+    "dev": "webpack-dev-server --hot",
     "build": "webpack --watch --config webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
