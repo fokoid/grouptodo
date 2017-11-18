@@ -52,8 +52,6 @@ class App extends Component {
     }
   }
 
-
-
   render = () => (
     <div>
       <h1>Todo List</h1>
@@ -71,8 +69,3 @@ class App extends Component {
 }
 
 export default App;
-
-
-
-
-
