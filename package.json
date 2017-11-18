@@ -25,6 +25,16 @@
       "name": "Alex Thorne",
       "email": "alex@thorne.cc",
       "url": "https://alexthorne.net/"
+    },
+    {
+      "name": "Zuzana Kunckova",
+      "email": "zk0433@gmail.com",
+      "url": ""
+    },
+    {
+      "name": "Yazed Jamal",
+      "email": "myazed.jamal@gmail.com",
+      "url": "http://yazedjamal.com"
     }
   ],
   "license": "MIT",
@@ -42,8 +52,11 @@
     "express": "^4.16.2",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
-    "react-hot-loader": "^3.0.0",
-    "webpack": "^3.8.1",
-    "webpack-dev-server": "^2.9.4"
+    "riek": "^1.1.0",
+    "webpack": "^3.8.1"
   },
+  "devDependencies": {
+    "react-hot-loader": "^3.0.0",
+    "webpack-dev-server": "^2.9.4"
+  }
 }
