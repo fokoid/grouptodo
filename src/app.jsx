@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {render} from 'react-dom'
 import TodoList from './todo-list.jsx'
-
+import './style.css'
 
 class App extends Component {
   state = {
