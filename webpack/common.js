@@ -7,6 +7,10 @@ module.exports = ({dirname, dist}) => ({
     app: [
       'babel-polyfill',
       './src/index.js'
+    ],
+    sw: [
+      'babel-polyfill',
+      './src/sw.js'
     ]
   },
   output: {
@@ -25,7 +29,8 @@ module.exports = ({dirname, dist}) => ({
     new CleanWebpackPlugin([dist], { root: dirname }),
     new HtmlWebpackPlugin({
       title: 'mws#uk Group Todo App',
-      inject: 'body'
+      inject: 'body',
+      excludeChunks: [ 'sw' ]
     })
   ]
 })

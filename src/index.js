@@ -2,6 +2,18 @@ import React from 'react'
 import { render } from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 import App from './app.jsx'
+//import swUrl from 'file-loader?name=sw.js!babel-loader!./sw'
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', async () => {
+    try {
+      const reg = await navigator.serviceWorker.register('/sw.bundle.js')
+      console.log('SW registered:', reg)
+    } catch (err) {
+      console.log('SW registration failed:', err)
+    }
+  })
+}
 
 const main = document.createElement('main')
 document.body.appendChild(main)
