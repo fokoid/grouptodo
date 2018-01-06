@@ -4,8 +4,8 @@
   "description": "Progressive web todo list app created as part of the Google Developer Challenge Scholarship 2017",
   "main": "server.js",
   "scripts": {
-    "dev": "webpack-dev-server --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.dev.js",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.prod.js",
     "postinstall": "npm run build",
     "heroku": "heroku local web",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -54,7 +54,9 @@
     "babel-loader": "^8.0.0-beta.0",
     "babel-polyfill": "^6.26.0",
     "clean-webpack-plugin": "^0.1.17",
+    "cross-env": "^5.1.3",
     "css-loader": "^0.28.7",
+    "file-loader": "^1.1.6",
     "html-webpack-plugin": "^2.30.1",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
