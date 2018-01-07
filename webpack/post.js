@@ -4,7 +4,9 @@ const path = require('path'),
 module.exports = ({src, dist}) => ({
   plugins: [
     new BundleAnalyzerPlugin({
-      analyzerMode: 'static'
+      analyzerMode: 'static',
+      reportFilename: 'bundle-report.html',
+      openAnalyzer: false
     })
   ]
 })
