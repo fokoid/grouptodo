@@ -2,7 +2,6 @@ import React from 'react'
 import { render } from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 import App from './app.jsx'
-//import swUrl from 'file-loader?name=sw.js!babel-loader!./sw'
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', async () => {
